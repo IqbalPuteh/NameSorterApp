@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 
 
 namespace UnitTestProject1
@@ -10,8 +11,10 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            NameSorter NS = new NameSorter();
-            // no method to test
+            var ExpectedPeoClassResult = "Iqbal Puteh";
+            People Peo = new People("Puteh", "Iqbal" + " ");
+            Assert.AreEqual(ExpectedPeoClassResult, Peo.ToString());    
+
 
         }
     }

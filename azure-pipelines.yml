@@ -1,5 +1,5 @@
 
-- task: DotNetCoreCLI@2
+- task: MSBuild@1
   inputs:
-    command: 'build'
-    projects: 'NameSorter.csproj'
+    solution: '**/*.sln'
+    clean: true
